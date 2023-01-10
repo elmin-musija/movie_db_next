@@ -1,6 +1,6 @@
-import { uid } from "uid";
 import Link from "next/link";
 import Image from "next/image";
+import { uid } from "uid";
 
 const GalleryItem = (props) => {
 	return (
@@ -10,12 +10,12 @@ const GalleryItem = (props) => {
 		>
 			<Link href={`/details/${props.pr_id}`}>
 				<Image
-					className="rounded-xl hover:scale-105 tranform duration-150 ease-out hover:shadow-xl hover:shadow-slate-700 mb-2"
+					className="rounded-xl hover:scale-105 tranform duration-150 ease-out hover:shadow-xl hover:shadow-slate-700 mb-2 w-auto"
 					src={`https://image.tmdb.org/t/p/w500${props.pr_image_src}`}
+					alt={props.pr_title}
 					height={200}
 					width={200}
 					priority
-					alt={props.pr_title}
 				/>
 			</Link>
 			<p

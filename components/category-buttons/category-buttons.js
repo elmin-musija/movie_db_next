@@ -1,5 +1,5 @@
-import { uid } from "uid";
 import Link from "next/link";
+import { uid } from "uid";
 
 const CategorieButtons = (props) => {
 	const { categories } = props;

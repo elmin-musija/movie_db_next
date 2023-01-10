@@ -14,9 +14,9 @@ export async function fetchAllCategories() {
 	return allCategories;
 }
 
-export async function fetchMoviesByCategory(paramCategory) {
+export async function fetchMoviesByCategory(paramCategory, paramPage = 1) {
 	const moviesByCategoryPromise = await fetch(
-		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${paramCategory}`
+		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${paramCategory}&page=${paramPage}`
 	);
 	const moviesByCategory = await moviesByCategoryPromise.json();
 	return moviesByCategory;
