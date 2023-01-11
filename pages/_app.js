@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 import Header from "../components/header/header";
+import SearchBar from "../components/searchbar/searchbar";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
+			<SearchBar />
 			<Component {...pageProps} />
 		</Layout>
 	);

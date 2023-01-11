@@ -29,3 +29,11 @@ export async function fetchMovieByID(paramID) {
 	const movieByID = await movieByIDPromise.json();
 	return movieByID;
 }
+
+export async function fetchMoviesBySearch(paramSearch, paramPage = 1) {
+	const movieBySearchPromise = await fetch(
+		`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=en-US&query=${paramSearch}&page=${paramPage}&include_adult=false`
+	);
+	const movieBySearch = await movieBySearchPromise.json();
+	return movieBySearch;
+}
