@@ -1,6 +1,6 @@
 export async function fetchPopularMovies() {
 	const popularMoviesFetch = await fetch(
-		`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US`
+		`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&include_adult=false`
 	);
 	const popularMovies = await popularMoviesFetch.json();
 	return popularMovies;
@@ -16,7 +16,7 @@ export async function fetchAllCategories() {
 
 export async function fetchMoviesByCategory(paramCategory, paramPage = 1) {
 	const moviesByCategoryPromise = await fetch(
-		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${paramCategory}&page=${paramPage}`
+		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${paramCategory}&page=${paramPage}&include_adult=false`
 	);
 	const moviesByCategory = await moviesByCategoryPromise.json();
 	return moviesByCategory;
