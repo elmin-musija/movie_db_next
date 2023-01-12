@@ -1,11 +1,12 @@
 import { uid } from "uid";
+
 import GalleryItem from "../gallery-item/gallery-item";
 
 const MovieGallery = (props) => {
 	const { movies } = props;
 
 	return (
-		<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-12">
+		<div>
 			{movies.results?.map((movie) => {
 				if (movie.poster_path || movie.backdrop_path) {
 					return (
