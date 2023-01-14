@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./FilterBtn.module.css";
+import styles from "./filterBtn.module.css";
 
 function FilterBtn() {
 	return (

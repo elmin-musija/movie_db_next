@@ -1,6 +1,5 @@
-import React from "react";
 import SearchBar from "../searchbar/searchbar";
-import FilterBtn from "../filter-btn/FilterBtn";
+import FilterBtn from "../filter-btn/filterBtn";
 import CategorieButtons from "../category-buttons/category-buttons";
 import styles from "./navbar.module.css";
 import Logo from "../logo/logo";
@@ -14,7 +13,9 @@ function Navbar() {
 				<FilterBtn />
 			</div>
 
-			{/* <CategorieButtons /> */}
+			<div className={styles.categoryArea}>
+				<CategorieButtons />
+			</div>
 		</nav>
 	);
 }

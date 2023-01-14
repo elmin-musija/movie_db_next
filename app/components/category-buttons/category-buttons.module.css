@@ -1,0 +1,22 @@
+.btnContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+.catBtn {
+	padding: 0.6rem 1.2rem;
+	border: 1px solid var(--white);
+	background-color: var(--dark);
+	color: var(--white);
+	text-decoration: none;
+	border-radius: 0.4rem;
+	transition: all 0.2s;
+}
+
+.catBtn:hover {
+	background-color: var(--normal);
+	border-radius: 0.8rem;
+}
