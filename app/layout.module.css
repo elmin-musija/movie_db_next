@@ -1,3 +1,10 @@
-.header {
-	background-color: lightblue;
+.body {
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+.container {
+	max-width: 180rem;
+	margin: 0 auto;
+	padding: 8rem 2rem 0;
 }

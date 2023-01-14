@@ -1,15 +1,16 @@
 import Head from "./head";
 import React from "react";
+import "../styles/globals.css";
 import styles from "./layout.module.css";
 import Navbar from "./components/navbar/navbar";
 
 function Layout({ children }) {
 	return (
-		<html className={styles.header} lang="en">
+		<html lang="en">
 			<Head />
-			<body>
+			<body className={styles.body}>
 				<Navbar />
-				{children}
+				<div className={styles.container}>{children}</div>
 			</body>
 		</html>
 	);

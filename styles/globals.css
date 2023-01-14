@@ -1,3 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+	--dark: #293241;
+	--normal: #3d5a80;
+	--light: #98c1d9;
+	--white: #e0fbfc;
+	--highlight: #ee6c4d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+p,
+a {
+	font-size: 1.6rem;
+}
