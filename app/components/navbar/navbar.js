@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "../searchbar/searchbar";
+import FilterBtn from "../filter-btn/FilterBtn";
 import CategorieButtons from "../category-buttons/category-buttons";
 import styles from "./navbar.module.css";
 import Logo from "../logo/logo";
@@ -10,14 +11,7 @@ function Navbar() {
 			<div className={styles.container}>
 				<Logo />
 				<SearchBar />
-				<button className={styles.filterBtn}>
-					<img
-						src="/filter.svg"
-						alt="Filter Icon"
-						className={styles.filterIcon}
-					/>{" "}
-					<p>Categories</p>
-				</button>
+				<FilterBtn />
 			</div>
 
 			{/* <CategorieButtons /> */}
