@@ -25,7 +25,6 @@ const SearchBar = (props) => {
 					placeholder="Search"
 					ref={inputRef}
 				/>
-				{/* <input type="submit" className={styles.searchbtn} /> */}
 				<img
 					src="/search.svg"
 					alt="Search Bar Icon"
