@@ -19,6 +19,7 @@
 
 .headingContainer {
 	transform: rotate(-25deg);
+	padding-left: 0.4rem;
 }
 
 .heading {
