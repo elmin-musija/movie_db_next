@@ -10,7 +10,14 @@ function Navbar() {
 			<div className={styles.container}>
 				<Logo />
 				<SearchBar />
-				<button>Filter</button>
+				<button className={styles.filterBtn}>
+					<img
+						src="/filter.svg"
+						alt="Filter Icon"
+						className={styles.filterIcon}
+					/>{" "}
+					<p>Categories</p>
+				</button>
 			</div>
 
 			{/* <CategorieButtons /> */}
