@@ -1,6 +1,7 @@
 .navbar {
 	background-color: var(--dark);
 	color: var(--highlight);
+	box-shadow: 0 0 1rem #333;
 
 	position: fixed;
 	top: 0;
@@ -25,7 +26,8 @@
 .heading {
 	font-size: 2rem;
 	font-weight: 900;
-	line-height: 0.8;
+	line-height: 0.85;
+	text-shadow: -1px -1px 0 hsl(12, 83%, 50%);
 }
 
 .heading1 {
