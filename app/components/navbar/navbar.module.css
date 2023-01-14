@@ -16,3 +16,25 @@
 	margin: 0 auto;
 	padding: 2rem;
 }
+
+.headingContainer {
+	transform: rotate(-25deg);
+}
+
+.heading {
+	font-size: 2rem;
+	font-weight: 900;
+	line-height: 0.8;
+}
+
+.heading1 {
+	transform: skew(-25deg);
+}
+
+.heading2 {
+	transform: skew(25deg);
+}
+
+.heading3 {
+	transform: skew(-25deg);
+}
