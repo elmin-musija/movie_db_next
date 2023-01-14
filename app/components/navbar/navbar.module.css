@@ -17,27 +17,3 @@
 	margin: 0 auto;
 	padding: 2rem;
 }
-
-.headingContainer {
-	transform: rotate(-25deg);
-	padding-left: 0.4rem;
-}
-
-.heading {
-	font-size: 2rem;
-	font-weight: 900;
-	line-height: 0.85;
-	text-shadow: -1px -1px 0 hsl(12, 83%, 50%);
-}
-
-.heading1 {
-	transform: skew(-25deg);
-}
-
-.heading2 {
-	transform: skew(25deg);
-}
-
-.heading3 {
-	transform: skew(-25deg);
-}
