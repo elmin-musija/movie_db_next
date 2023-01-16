@@ -14,8 +14,12 @@ const SearchBar = (props) => {
 		inputRef.current.value = "";
 	};
 
+	const focusHandler = () => {
+		inputRef.current.focus();
+	};
+
 	return (
-		<div className={styles.searchContainer}>
+		<div className={styles.searchContainer} onClick={focusHandler}>
 			<form onSubmit={onSubmitHandler} className={styles.form}>
 				<input
 					className={styles.inputField}
