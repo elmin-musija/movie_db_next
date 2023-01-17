@@ -20,5 +20,4 @@
 
 .catBtn:hover {
 	background-color: var(--normal);
-	border-radius: 0.8rem;
 }

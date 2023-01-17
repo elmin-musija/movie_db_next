@@ -48,8 +48,10 @@
 	text-decoration: none;
 	color: var(--highlight);
 	padding: 0.4rem 0;
+	border-bottom: 1px solid #00000000;
+	transition: border-bottom 0.25s;
 }
 
 .readMore:hover {
-	text-decoration: underline;
+	border-bottom: 1px solid var(--highlight);
 }
