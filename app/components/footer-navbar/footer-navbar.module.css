@@ -1,0 +1,21 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+
+.pagination a {
+	text-decoration: none;
+	padding: 0.8rem 1.6rem;
+	border-radius: 0.6rem;
+	background-color: var(--dark);
+	color: var(--white);
+	transition: all 0.25s;
+}
+
+.pagination a:hover {
+	background-color: var(--highlight);
+	color: var(--white);
+}
