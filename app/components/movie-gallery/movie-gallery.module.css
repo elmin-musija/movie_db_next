@@ -1,0 +1,23 @@
+.grid {
+	column-count: 5;
+	gap: var(--gapGrid);
+	margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+	.grid {
+		column-count: 4;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.grid {
+		column-count: 3;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.grid {
+		column-count: 2;
+	}
+}

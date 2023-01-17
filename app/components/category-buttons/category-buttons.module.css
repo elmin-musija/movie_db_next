@@ -4,6 +4,8 @@
 	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 2rem;
+	max-width: var(--maxWidth);
+	margin: 0 auto;
 }
 
 .catBtn {

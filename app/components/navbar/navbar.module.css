@@ -7,13 +7,14 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 999;
 }
 
 .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 180rem;
+	max-width: var(--maxWidth);
 	margin: 0 auto;
 	padding: 2rem;
 }

@@ -1,12 +1,12 @@
 import { uid } from "uid";
-
+import styles from "./movie-gallery.module.css";
 import GalleryItem from "../gallery-item/gallery-item";
 
 const MovieGallery = (props) => {
 	const { movies } = props;
 
 	return (
-		<div>
+		<div className={styles.grid}>
 			{movies.results?.map((movie) => {
 				if (movie.poster_path || movie.backdrop_path) {
 					return (
