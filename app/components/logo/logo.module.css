@@ -4,6 +4,11 @@
 	cursor: pointer;
 }
 
+.headingContainer a {
+	color: var(--hightlight);
+	text-decoration: none;
+}
+
 .heading {
 	font-size: 2rem;
 	font-weight: 900;
