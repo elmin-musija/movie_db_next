@@ -8,6 +8,7 @@
 
 .form {
 	display: flex;
+	width: 20rem;
 }
 
 .searchContainer:focus-within {
@@ -17,6 +18,7 @@
 }
 
 .inputField {
+	width: 16.3rem;
 	padding: 1rem;
 	font-size: 1.4rem;
 	border: none;
