@@ -28,7 +28,7 @@ export default async function Details(props) {
 					{movieItem.overview}
 				</p>
 				<p key={uid()} className={styles.rate}>
-					{movieItem.vote_average} / 5 ⭐
+					{movieItem.vote_average.toFixed(1)} / 10 ⭐
 				</p>
 				<p key={uid()} className={styles.released}>
 					Released: {movieItem.release_date}
