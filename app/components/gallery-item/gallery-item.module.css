@@ -1,5 +1,5 @@
 .item {
-	background-color: var(--white);
+	background-color: #00000000;
 	border-radius: 1rem;
 	overflow: hidden;
 	height: fit-content;
@@ -26,6 +26,7 @@
 
 .movieInfo {
 	padding: 1rem;
+	background-color: var(--white);
 }
 
 .title {
