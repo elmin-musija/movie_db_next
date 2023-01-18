@@ -1,0 +1,23 @@
+.navbar {
+	display: flex;
+	gap: 1rem;
+}
+
+.navbar button,
+.navbar a {
+	text-decoration: none;
+	padding: 0.8rem 1.6rem;
+	border-radius: 0.6rem;
+	background-color: var(--dark);
+	color: var(--white);
+	transition: all 0.25s;
+	border: none;
+	cursor: pointer;
+	font-size: 1.6rem;
+}
+
+.navbar button:hover,
+.navbar a:hover {
+	background-color: var(--highlight);
+	color: var(--white);
+}

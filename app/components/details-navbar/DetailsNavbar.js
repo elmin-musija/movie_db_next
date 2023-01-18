@@ -1,4 +1,5 @@
 "use client";
+import styles from "./details-navbar.module.css";
 
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -12,8 +13,8 @@ function DetailsNavbar() {
 	};
 
 	return (
-		<div>
-			<button onClick={onClickHandler}>Back</button>
+		<div className={styles.navbar}>
+			<button onClick={onClickHandler}>&laquo; Back</button>
 			<Link href="/">Home</Link>
 		</div>
 	);
