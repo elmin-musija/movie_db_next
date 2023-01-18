@@ -10,14 +10,25 @@ export default async function Details(props) {
 
 	return (
 		<div className={styles.details}>
-			<Image
-				src={`https://image.tmdb.org/t/p/original${movieItem.backdrop_path}`}
-				alt={movieItem.title}
-				width={1200}
-				height={500}
-				priority
-				className={styles.titleImg}
-			/>
+			<div className={styles.detailsHeader}>
+				<Image
+					src={`https://image.tmdb.org/t/p/original${movieItem.backdrop_path}`}
+					alt={movieItem.title}
+					width={800}
+					height={300}
+					priority
+					className={styles.titleImg}
+				/>
+				<div className={styles.ratingContainer}>
+					<img src="/star.svg" alt="star icon" className={styles.starIcon} />
+					<p key={uid()} className={styles.rate}>
+						<span className={styles.rateValue}>
+							{movieItem.vote_average.toFixed(1)}
+						</span>{" "}
+						/ 10
+					</p>
+				</div>
+			</div>
 
 			<div className={styles.detailsInfo}>
 				<h2>{movieItem.title}</h2>
@@ -27,9 +38,7 @@ export default async function Details(props) {
 				<p key={uid()} className={styles.overview}>
 					{movieItem.overview}
 				</p>
-				<p key={uid()} className={styles.rate}>
-					{movieItem.vote_average.toFixed(1)} / 10 ⭐
-				</p>
+
 				<p key={uid()} className={styles.released}>
 					Released: {movieItem.release_date}
 				</p>

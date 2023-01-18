@@ -3,7 +3,7 @@
 	color: var(--white);
 }
 
-.details img {
+.titleImg {
 	width: 100%;
 	height: auto;
 	border-radius: 1rem;
@@ -21,4 +21,42 @@
 
 .tagline {
 	font-style: italic;
+}
+
+.detailsHeader {
+	position: relative;
+	color: var(--dark);
+}
+
+.ratingContainer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translateY(-70%);
+
+	background-color: var(--white);
+	box-shadow: 0 0 1rem #333;
+	padding: 1rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
+}
+
+.starIcon {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 3px;
+}
+
+.rate {
+	font-size: 1.4rem;
+}
+
+.rateValue {
+	font-weight: 600;
 }
