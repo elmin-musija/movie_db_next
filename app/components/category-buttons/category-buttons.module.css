@@ -15,7 +15,7 @@
 	color: var(--white);
 	text-decoration: none;
 	border-radius: 0.4rem;
-	transition: all 0.2s;
+	transition: all 0.25s;
 }
 
 .catBtn:hover {

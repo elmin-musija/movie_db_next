@@ -5,22 +5,39 @@
 	color: var(--white);
 }
 
+.details img {
+	width: 33.3rem;
+	height: 50rem;
+	border-radius: 1rem;
+}
+
 .details h2 {
 	font-size: 2.8rem;
 	margin-bottom: 0.8rem;
 }
 
-.details p:nth-of-type(1) {
+.details .tagline {
 	font-style: italic;
 	margin-bottom: 1.4rem;
 }
 
-.details p:nth-of-type(2) {
+.details .overview {
 	margin-bottom: 1.4rem;
 }
 
-.details p:nth-of-type(3) {
+.details .rate {
 	margin-bottom: 1.4rem;
+}
+
+.details .released {
+	margin-bottom: 1.4rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.details img {
+		width: 26.6rem;
+		height: 40rem;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,7 +45,14 @@
 		flex-wrap: wrap;
 	}
 
+	.imgContainer {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
 	.details img {
-		margin: 0 auto;
+		width: 20rem;
+		height: 30rem;
 	}
 }

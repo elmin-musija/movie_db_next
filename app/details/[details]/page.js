@@ -10,18 +10,29 @@ export default async function Details(props) {
 
 	return (
 		<div className={styles.details}>
-			<Image
-				src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`}
-				alt={movieItem.title}
-				width={233}
-				height={350}
-				priority
-			/>
+			<div className={styles.imgContainer}>
+				<Image
+					src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`}
+					alt={movieItem.title}
+					width={233}
+					height={350}
+					priority
+				/>
+			</div>
 			<div>
 				<h2>{movieItem.title}</h2>
-				<p key={uid()}>{movieItem.tagline}</p>
-				<p key={uid()}>{movieItem.overview}</p>
-				<p key={uid()}>Released: {movieItem.release_date}</p>
+				<p key={uid()} className={styles.tagline}>
+					{movieItem.tagline}
+				</p>
+				<p key={uid()} className={styles.overview}>
+					{movieItem.overview}
+				</p>
+				<p key={uid()} className={styles.rate}>
+					{movieItem.vote_average} / 5 ⭐
+				</p>
+				<p key={uid()} className={styles.released}>
+					Released: {movieItem.release_date}
+				</p>
 				<DetailsNavbar />
 			</div>
 		</div>
