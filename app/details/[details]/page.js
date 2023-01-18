@@ -10,16 +10,16 @@ export default async function Details(props) {
 
 	return (
 		<div className={styles.details}>
-			<div className={styles.imgContainer}>
-				<Image
-					src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`}
-					alt={movieItem.title}
-					width={233}
-					height={350}
-					priority
-				/>
-			</div>
-			<div>
+			<Image
+				src={`https://image.tmdb.org/t/p/original${movieItem.backdrop_path}`}
+				alt={movieItem.title}
+				width={1200}
+				height={500}
+				priority
+				className={styles.titleImg}
+			/>
+
+			<div className={styles.detailsInfo}>
 				<h2>{movieItem.title}</h2>
 				<p key={uid()} className={styles.tagline}>
 					{movieItem.tagline}
