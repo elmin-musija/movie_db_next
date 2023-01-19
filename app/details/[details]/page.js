@@ -8,17 +8,21 @@ export default async function Details(props) {
 	const details = props.params.details;
 	const movieItem = await fetchMovieByID(details);
 
+	console.log(movieItem);
+
 	return (
 		<div className={styles.details}>
 			<div className={styles.detailsHeader}>
-				<Image
-					src={`https://image.tmdb.org/t/p/original${movieItem.backdrop_path}`}
-					alt={movieItem.title}
-					width={800}
-					height={300}
-					priority
-					className={styles.titleImg}
-				/>
+				{movieItem.backdrop_path !== null && (
+					<Image
+						src={`https://image.tmdb.org/t/p/original${movieItem.backdrop_path}`}
+						alt={movieItem.title}
+						width={800}
+						height={300}
+						priority
+						className={styles.titleImg}
+					/>
+				)}
 				<div className={styles.ratingContainer}>
 					<img src="/star.svg" alt="star icon" className={styles.starIcon} />
 					<p key={uid()} className={styles.rate}>
@@ -35,13 +39,39 @@ export default async function Details(props) {
 				<p key={uid()} className={styles.tagline}>
 					{movieItem.tagline}
 				</p>
+
+				<h3>Genres</h3>
+				<div className={styles.genreContainer}>
+					{movieItem.genres.map((genre) => (
+						<p className={styles.genre}>{genre.name}</p>
+					))}
+				</div>
+				<h3>Overview</h3>
 				<p key={uid()} className={styles.overview}>
 					{movieItem.overview}
 				</p>
 
+				<h3>Details</h3>
+				<div className={styles.detailsContainer}>
+					{movieItem.runtime !== 0 && <p>Runtime: {movieItem.runtime} min</p>}
+					<div className={styles.langContainer}>
+						<p>Languages:</p>
+						{movieItem.spoken_languages.map((spoken_languages) => (
+							<p className={styles.language}>{spoken_languages.english_name}</p>
+						))}
+					</div>
+					{movieItem.homepage !== "" && (
+						<a href={movieItem.homepage} target="_blank">
+							Official website &raquo;
+						</a>
+					)}
+				</div>
+
+				<h3>Status</h3>
 				<p key={uid()} className={styles.released}>
-					Released: {movieItem.release_date}
+					{movieItem.status}, {movieItem.release_date}
 				</p>
+
 				<DetailsNavbar />
 			</div>
 		</div>

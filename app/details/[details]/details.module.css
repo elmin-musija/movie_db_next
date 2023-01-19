@@ -15,12 +15,18 @@
 	margin-bottom: 0.8rem;
 }
 
-.detailsInfo p {
-	margin-bottom: 1.4rem;
+.details h3 {
+	font-size: 2rem;
+	margin-bottom: 0.8rem;
 }
 
 .tagline {
 	font-style: italic;
+	margin-bottom: 2.4rem;
+}
+
+.released {
+	margin-bottom: 2.4rem;
 }
 
 .detailsHeader {
@@ -59,4 +65,48 @@
 
 .rateValue {
 	font-weight: 600;
+}
+
+.genreContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 2.4rem;
+}
+
+.genre {
+	padding: 0.6rem 1.2rem;
+	border: 1px solid var(--white);
+	border-radius: 0.4rem;
+	margin-bottom: 0;
+}
+
+.overview {
+	margin-bottom: 2.4rem;
+}
+
+.detailsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	margin-bottom: 2.4rem;
+}
+
+.detailsContainer a {
+	width: fit-content;
+	color: var(--white);
+	text-decoration: none;
+	transition: all 0.25s;
+	padding-bottom: 3px;
+	border-bottom: 1px solid var(--white);
+}
+
+.detailsContainer a:hover {
+	color: var(--highlight);
+	border-bottom: 1px solid var(--highlight);
+}
+
+.langContainer {
+	display: flex;
+	gap: 1rem;
 }
