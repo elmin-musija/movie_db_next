@@ -1,5 +1,5 @@
 import SearchBar from "../searchbar/searchbar";
-import FilterBtn from "../filter-btn/filterBtn";
+import FilterBtn from "../filter-btn/FilterBtn";
 import CategorieButtons from "../category-buttons/category-buttons";
 import styles from "./navbar.module.css";
 import Logo from "../logo/logo";
