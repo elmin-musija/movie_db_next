@@ -40,10 +40,12 @@ export default async function Details(props) {
 					{movieItem.tagline}
 				</p>
 
-				<h3>Genres</h3>
+				<h3>Categories</h3>
 				<div className={styles.genreContainer}>
 					{movieItem.genres.map((genre) => (
-						<p className={styles.genre}>{genre.name}</p>
+						<p className={styles.genre} key={uid()}>
+							{genre.name}
+						</p>
 					))}
 				</div>
 				<h3>Overview</h3>
@@ -54,12 +56,16 @@ export default async function Details(props) {
 				<h3>Details</h3>
 				<div className={styles.detailsContainer}>
 					{movieItem.runtime !== 0 && <p>Runtime: {movieItem.runtime} min</p>}
-					<div className={styles.langContainer}>
-						<p>Languages:</p>
-						{movieItem.spoken_languages.map((spoken_languages) => (
-							<p className={styles.language}>{spoken_languages.english_name}</p>
-						))}
-					</div>
+					{movieItem.spoken_languages.length !== 0 && (
+						<div className={styles.langContainer}>
+							<p>Languages:</p>
+							{movieItem.spoken_languages.map((spoken_languages) => (
+								<p className={styles.language} key={uid()}>
+									{spoken_languages.english_name}
+								</p>
+							))}
+						</div>
+					)}
 					{movieItem.homepage !== "" && (
 						<a href={movieItem.homepage} target="_blank">
 							Official website &raquo;
