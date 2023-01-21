@@ -8,6 +8,15 @@ export default async function Details(props) {
 	const details = props.params.details;
 	const movieItem = await fetchMovieByID(details);
 
+	const readableDate = new Date(movieItem.release_date).toLocaleDateString(
+		"en-US",
+		{
+			day: "numeric",
+			month: "long",
+			year: "numeric",
+		}
+	);
+
 	console.log(movieItem);
 
 	return (
@@ -75,7 +84,7 @@ export default async function Details(props) {
 
 				<h3>Status</h3>
 				<p key={uid()} className={styles.released}>
-					{movieItem.status}, {movieItem.release_date}
+					{movieItem.status} / {readableDate}
 				</p>
 
 				<DetailsNavbar />
